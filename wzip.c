@@ -15,7 +15,7 @@ int main(int argc, char *argv[]){
 
         FILE *f = fopen(argv[i],"rb");
         if(f == NULL){
-            printf("wcat: cannot open file\n");
+            printf("wzip: cannot open file\n");
             return 1;
         }
         
@@ -48,6 +48,6 @@ int main(int argc, char *argv[]){
         fwrite(&count, sizeof(int), 1, stdout);
         fwrite(&previous_byte, sizeof(unsigned char), 1, stdout);
     }
-    
+
     return 0;
 }
